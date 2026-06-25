@@ -1,0 +1,63 @@
+[project]
+name = "rifap-app"
+version = "1.1.0"
+description = "Plan de secours interactif"
+authors = [
+    { name = "CS-DEV (Cedric SALVAT)" },
+]
+dependencies = [
+    "flet==0.85.2",
+    "flet-geolocator==0.85.2",
+    "httpx>=0.27.0",
+]
+
+[tool.flet]
+org          = "fr.csdev"
+product      = "RIFAP App"
+company      = "CS-DEV"
+copyright    = "Copyright (c) 2026 CS-DEV"
+build_number = 1100
+permissions  = ["location"]
+
+[tool.flet.app]
+module = "main"
+
+[tool.flet.splash]
+color      = "#0A1628"
+dark_color = "#0A1628"
+web        = false
+
+[tool.flet.android]
+adaptive_icon_background = "#0A1628"
+split_per_abi            = false
+package_name             = "fr.csdev.rifap_app"
+
+[tool.flet.android.permission]
+"android.permission.INTERNET"               = true
+"android.permission.ACCESS_FINE_LOCATION"   = true
+"android.permission.ACCESS_COARSE_LOCATION" = true
+
+[tool.flet.android.feature]
+"android.hardware.location.gps"     = false
+"android.hardware.location.network" = false
+"android.hardware.telephony"        = false
+
+[tool.flet.ios]
+bundle_id = "fr.csdev.rifap_app"
+
+[tool.flet.macos]
+bundle_id = "fr.csdev.rifap_app"
+
+[tool.flet.cleanup]
+app_files = [
+    "*.md",
+    "*.log",
+    "run.py",
+    "download_flet_client.py",
+    "__pycache__",
+    "*.pyc",
+]
+package_files = [
+    "*.dist-info",
+    "*.pyi",
+]
