@@ -16,7 +16,7 @@ org          = "fr.csdev"
 product      = "RIFAP App"
 company      = "CS-DEV"
 copyright    = "Copyright (c) 2026 CS-DEV"
-build_number = 1100
+build_number = 1101
 permissions  = ["location"]
 
 [tool.flet.app]
